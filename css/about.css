@@ -31,14 +31,14 @@
     transform: translateY(-1px);
 }
 
-/*------- header -------*/
-.header {
+/*------- main -------*/
+.main {
     width: 100vw;
     height: 100vh;
     position: relative;
 }
 
-.header_bg {
+.main_bg {
     width: calc(100vw * 10/12);
     height: 100vh;
     background-image: linear-gradient(
@@ -59,7 +59,7 @@
 
 }
 
-.header_content {
+.main_content {
     /* padding-top: calc(100vh * 2/12 + 5rem); */
     width: calc(100vw * 4/12);
     /* height: calc(100vh * 8/12 -5rem); */
@@ -70,13 +70,13 @@
     left: 50%;
 }
 
-.header_content h2 {
+.main_content h2 {
     font-size: 2rem;
     font-weight: 700;
     color: #212529;
 }
 
-.header_content .boxRight {
+.main_content .boxRight {
     overflow-y: auto;
     height: calc( 100vh * 6/12);
 }
@@ -85,7 +85,7 @@
     box-shadow: inset 0 0 5px 5px rgb(29, 53, 87, .6);
 } 
 
-.header_content p {
+.main_content p {
     padding-right: 1rem;
     /* background-color: rgba(255, 255, 255, 0.1); */
 }

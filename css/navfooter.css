@@ -37,7 +37,6 @@
     text-align: center;
     /* padding: .5em .5em; */
     /* border: 1px solid #fff; */
-    transition: all .2s;
 }
 
 .topnav li a {
@@ -47,6 +46,7 @@
     height: 3rem;
     display: block;
     line-height: 3rem;
+    transition: all .2s;
 }
 
 .topnav li a:hover{

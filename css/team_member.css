@@ -1,5 +1,68 @@
-/*------- header -------*/
-.header {
+/*------- main -------*/
+.main {
     width: 100vw;
-    height: 100vh;  
+}
+
+.main .main_wrapper {
+    /* background-color: blue; */
+    margin:0 3rem;
+    margin-top: 5rem;
+}
+
+.main_wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    justify-content: space-between;
+}
+
+.main_wrapper ul li {
+    width: 200px;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    word-wrap: break-word;
+    border: 20px solid #fff;
+    border-radius: .5rem;
+}
+
+.main_wrapper ul li img {
+    min-width: 150px;
+}
+
+.main_wrapper h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #1d3557;
+}
+
+.main_wrapper p {}
+
+.main_wrapper span {
+    display: flex;
+    justify-content: flex-end;
+    transition: all 2s;
+}
+.main_wrapper .profile-icon {
+    font-size: 1.3rem;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    color: #ec9a9a;
+    border: 3px solid #ec9a9a; 
+    border-radius: .5rem;
+    margin-left: .5rem;
+}
+
+
+.main_wrapper span a:hover {
+    color: #f1faee;
+    border:3px solid #f1faee; 
+    background-color: #e63946;
+    /* transform: translateY(0px); */
+}
+
+.main_wrapper span a:active {
+    transform: translateY(2px);
+    transition: all .2s;
 }

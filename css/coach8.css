@@ -1,0 +1,92 @@
+/*------- main -------*/
+.main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.main .main_wrapper {
+    /* background-color: blue; */
+    /* height: 100vh; */
+    position: absolute;
+    top: calc(100vh * 2/12);
+
+    left:3rem;
+    right: 3rem;
+    height:calc(100vh * 9/12);
+    width: calc(100vw - 6rem);
+    display: flex;
+    /* justify-content: ; */
+    /* background-color: red; */
+}
+
+.main_wrapper img {
+    /* 尺寸4:5 */
+    width: calc(100vw * 5/12);
+    /* width: 400px; */
+    object-fit: contain;
+    flex-grow: 1;
+
+}
+
+.main_wrapper .coach {
+    width: calc(100vw * 5/12);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    flex-grow: 1;
+}
+
+.main_wrapper .coach h2{
+    font-size: 2rem;
+    font-weight: 700;
+    flex-grow: 1;
+    color: #1d3557;
+}
+
+.main_wrapper .coach_content {
+    flex-grow: 2;
+    display: flex;
+}
+
+.main_wrapper .coach_content h4{
+    width: 400px;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    line-height: 1;
+    color: #1d3557;
+}
+
+.main_wrapper .coach_content span {
+    margin-left: auto;
+}
+
+.main_wrapper .coach_content a {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    color: #ec9a9a;
+    border: 3px solid #ec9a9a; 
+    border-radius: .5rem;
+}
+
+.main_wrapper .coach_content a:hover {
+    color: #f1faee;
+    border:3px solid #f1faee; 
+    background-color: #e63946;
+}
+
+.main_wrapper .coach_content a:active {
+    transform: translateY(2px);
+    transition: all .2s;
+}
+
+.main_wrapper .box_right {
+    /* margin-top: 1rem; */
+    flex-grow: 6;
+    overflow-y: auto;
+    /* height: 300px; */
+}

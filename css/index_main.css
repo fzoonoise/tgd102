@@ -67,8 +67,6 @@
     color: #f1faee;
 }
 
-.header_article_content {
-}
 
 .header_article_wrapper ul{
     display: flex;
@@ -91,7 +89,6 @@
     flex-shrink: 0;
 }
 
-.header_article_wrapper ul li a {}
 
 .header_article_wrapper .btn-default {
     font-size: 1rem;
@@ -99,9 +96,6 @@
     padding: 0 .5rem;
     line-height: 2rem;
 }
-
-.header_article_wrapper .btn-default a {}
-
 
 
 
@@ -155,8 +149,6 @@
     color: #1d3557;
 }
 
-.main_wrapper .main_content a {
-}
 
 .main_wrapper .main_content i{
     color: #f1faee;

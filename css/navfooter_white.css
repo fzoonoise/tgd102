@@ -95,8 +95,6 @@
     flex-direction: column;
 }
 
-.topnav li ol li {
-}
 
 .topnav li ol li a {
     display: none;   
@@ -226,8 +224,6 @@
     font-size: 3rem;
 }
 
-.footer .footer_time p {
-}
 
 .footer .footer_contact li{
     padding-bottom: 20px;
@@ -244,7 +240,6 @@
     line-height: 1.5rem;
 }
 
-.footer .footer_follow {}
 
 .footer .footer_follow h2 {
     font-size: 2rem;

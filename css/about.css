@@ -7,7 +7,6 @@
     background-color: #212529;
 }
 
-.topnav li a:hover{}
 
 .topnav ul > li:nth-of-type(2):hover > a, .topnav ul > li:nth-of-type(3):hover > a{
     transform: none;

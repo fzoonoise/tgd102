@@ -1,0 +1,34 @@
+.header {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.header_bg {
+    width: calc(100vw * 10/12);
+    height: 100vh;
+    background-image: linear-gradient(
+        to left,
+        rgba(241, 250, 238, 1) 0,
+        /* rgba(241, 250, 238, 1) 10%, */
+        rgba(241, 250, 238, 0) calc(100vw * 6/12 )),
+        url('../img/about_us_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 5rem;
+    /* overflow: hidden; */
+    position: absolute;
+    left: 0%;
+    overflow: hidden;
+    /* calc(100vw * 4/12)) */
+
+}
+
+
+
+.header img {
+    /* padding-top: 5rem;
+    overflow: hidden;
+    position: absolute; */
+}
+

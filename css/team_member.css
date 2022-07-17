@@ -21,7 +21,8 @@
     background-color: #fff;
     margin-bottom: 2rem;
     word-wrap: break-word;
-    border: 20px solid #fff;
+    /* border: 20px solid #fff; */
+    padding: 1.5rem;
     border-radius: .5rem;
 }
 

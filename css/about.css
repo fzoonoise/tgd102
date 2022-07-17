@@ -3,10 +3,6 @@
     background-color: #212529;
 }
 
-.topnav li a {
-    background-color: #212529;
-}
-
 
 .topnav ul > li:nth-of-type(2):hover > a, .topnav ul > li:nth-of-type(3):hover > a{
     transform: none;
@@ -44,7 +40,8 @@
     background-image: linear-gradient(
         to left,
         rgba(241, 250, 238, 1) 0,
-        /* rgba(241, 250, 238, 1) 10%, */
+        /* rgba(241, 250, 238, .8) 5%, */
+        rgba(241, 250, 238, .8) 30%,
         rgba(241, 250, 238, 0) calc(100vw * 6/12 )),
         url('../img/about_us_bg.jpg');
     background-repeat: no-repeat;
@@ -67,7 +64,7 @@
 
     position: absolute;
     top: calc(100vh * 2/12 + 5rem);
-    left: 50%;
+    left: calc(100% * 7/12);
 }
 
 .main_content h2 {
@@ -89,4 +86,35 @@
     padding-right: 1rem;
     /* background-color: rgba(255, 255, 255, 0.1); */
 }
+/*------- main end-------*/
 
+
+/*------- map -------*/
+.map_bg {
+    padding: 0 3rem;
+    padding-top: 2rem;
+    background-color: #212529;
+}
+
+.map_wrapper {
+    margin: 0 auto;
+    /* width: calc(100% *10/12); */
+    height: 100%;
+    width: 100%;
+    background-color: #f1faee;
+
+    box-sizing: border-box;
+    border: 1rem double #212529;
+    border-radius: 1rem;
+}
+
+.map_wrapper .map {
+    width: 100%;
+    height: 150px;
+    transition: all 2s ease-in-out;
+}
+
+.map_wrapper:hover .map {
+    width: 100%;
+    height: 100vh;
+}

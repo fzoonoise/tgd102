@@ -53,7 +53,7 @@
 .topnav li a:hover{
     transform: translateY(-3px);
     color: #f1faee;
-    /* border: 1.5px solid #f1faee; */
+    /* border: 1.5px solid #1d3557; */
     box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
 
     background-color: rgba(29, 53, 87, .6);
@@ -79,6 +79,9 @@
 
 .topnav ul li ol li > a:hover {
     border: 1.5px solid #f1faee;
+    background-color: rgb(224, 233, 245, .6);
+    color: #1d3557;
+    /* font-weight: 700;     */
 }
 
 .topnav ul li a.btn {
@@ -203,10 +206,14 @@
 
 .footer .footer_content {
     display: flex;
-    justify-content:space-between;
+    justify-content:flex-end;
     /* background-color: aquamarine; */
-    width: calc(100% * 9/12);
+    width: calc(100% * 8/12);
     white-space: nowrap;
+}
+
+.footer .footer_content > div {
+    margin-left: 1rem;
 }
 
 .footer a {
@@ -274,8 +281,28 @@
     嘗試無效
 } */
 
-.footer .footer_follow li a:hover {
+.footer .footer_follow li a:hover > i{
+    color: #ec9a9a;
+    /* background-color: #e63946; */
+    /* transform: translateY(0px); */
+    transition: all .2s;
+}
+
+.references {
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+.references p {
+    font-size: .8rem;
+}
+
+.references a {
+    font-size: .8rem;
     color: #ec9a9a;
 }
 
-/*------- topnav end -------*/
+/*------- footer end -------*/

@@ -186,10 +186,14 @@
 
 .footer .footer_content {
     display: flex;
-    justify-content:space-between;
+    justify-content:flex-end;
     /* background-color: aquamarine; */
-    width: calc(100% * 9/12);
+    width: calc(100% * 8/12);
     white-space: nowrap;
+}
+
+.footer .footer_content > div {
+    margin-left: 1rem;
 }
 
 .footer a {
@@ -260,4 +264,21 @@
     color: #a8dadc;
 }
 
-/*------- topnav end -------*/
+.references {
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+.references p {
+    font-size: .8rem;
+}
+
+.references a {
+    font-size: .8rem;
+    color: #ec9a9a;
+}
+
+/*------- footer end -------*/

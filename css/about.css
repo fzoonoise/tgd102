@@ -1,34 +1,33 @@
 /*------- topnav -------*/
-.topnav {
+nav {
     background-color: #212529;
 }
 
 
-.topnav ul > li:nth-of-type(2):hover > a, .topnav ul > li:nth-of-type(3):hover > a{
+nav ul > li:nth-of-type(2):hover > a, nav ul > li:nth-of-type(3):hover > a{
     transform: none;
     border: none;
-    /* border: 1.5px solid #f1faee; */
     background-color: rgb(241, 250, 238, .9);
     color: #212529;
 }
 
-.topnav ul li ol li > a {
+nav ul li ol li > a {
     background-color: rgb(241, 250, 238, .9);
     color: #212529;
 }
 
-.topnav ul li ol li:hover a{
+nav ul li ol li:hover a{
     transform: translateY(-3px);
     background-color: rgba(33, 37, 41, .3);
     color: #f1faee;
 }
 
-.topnav ul li ol li:active a{
+nav ul li ol li:active a{
     transform: translateY(-1px);
 }
 
 /*------- main -------*/
-.main {
+main {
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -77,10 +76,6 @@
     overflow-y: auto;
     height: calc( 100vh * 6/12);
 }
-
-.boxRight::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 5px 5px rgb(29, 53, 87, .6);
-} 
 
 .main_content p {
     padding-right: 1rem;

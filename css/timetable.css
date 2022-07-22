@@ -1,251 +1,251 @@
-.main_wrapper {
+main {
+  display: grid;
+  margin: 0 auto;
+  /* 左右 */
+  grid-template-columns:1fr 7fr;
+  /* 上下 */
+  grid-template-rows:  auto 1fr;
+  grid-template-areas:".    top"
+                      "content content"
+                      ;
+
+  
+  /* height: 100vh; */
+  min-width: 800px; 
+  margin: 0 3rem;
+  background-color: #fff;
+  margin-top: 5rem;
+  /* margin-bottom: 3rem; */
+  padding: 30px 30px;
+
+  color: #212529;
+}
+
+
+  /* ------ calendar begin ------ */
+  /* ------ top ------ */
+.top_block{
+  grid-area: top;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.top_block h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+
+}
+
+.top_block a {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+  /* ------ calendar_main ------ */
+
+.calendar_main {
+  grid-area: content;
+}
+
+.calendar_wrapper{
+  display: grid;
+  /* 左右 */
+  grid-template-columns:1fr 7fr;
+  /* 上下 */
+  grid-template-rows: 50px 100px 100px 100px 100px auto 100px 100px;
+  grid-template-areas:". weekhead"
+                      ". weeka"
+                      ". weekb"
+                      ". weekc"
+                      ". weekd"
+                      "time time"
+                      ". weeke"
+                      ". weekf";
+
+  /* transition: all 2s; */
+}
+
+.calendar_week,
+.calendar_header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar_header {
+  grid-area: weekhead;
+
+}
+
+.calendar_week {
+  /* grid-auto-rows: 100px; */
+  grid-auto-rows: 100px;
+  text-align: center;
+
+  /* grid-auto-columns: 100px; */
+}
+
+.week1 {
+  grid-area: weeka;
+}
+
+.week2 {
+  grid-area: weekb;
+}
+
+.week3 {
+  grid-area: weekc;
+}
+
+.week4 {
+  grid-area: weekd;
+}
+
+.week5 {
+  grid-area: weeke;
+}
+
+.week6 {
+  grid-area: weekf;
+}
+
+.calendar_header {
+  grid-auto-rows: 50px;
+  align-items: center;
+  text-align: center;
+  background-color: #212529;
+  color: #fff;
+}
+
+.calendar_header div {
+  position: relative;
+}
+
+.calendar_header div::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 1rem;
+  background-color: #fff;
+}
+
+.calendar_header div:last-child:after {
+  display: none;
+}
+
+
+.calendar_header > div {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.calendar_day {
+  font-size: 3rem;
+  line-height: 100px;
+  align-items: center;
+  justify-content: center;
+  /* border-right: 2px dashed #000; */
+  border-top: 2px dashed #000;
+}
+
+
+
+.calendar_day:hover {
+  background-image: url('../img/circle.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 50%;
+  background-position: center;
+}
+
+.calendar_day:nth-of-type(1n + 7),
+.calendar_day:nth-of-type(7n + 1) {
+  background-color: #ccc;
+}
+
+.week1 .calendar_day {
+  border-top: 0;
+}
+
+/* .calendar_day:last-child {
+  border-right: 0;
+} */
+/* ------ calendar end ------ */
+
+.time {
+    grid-area: time;
     display: grid;
-    margin: 0 auto;
-    /* 左右 */
-    grid-template-columns:1fr 7fr;
-    /* 上下 */
-    grid-template-rows:  auto 1fr;
-    grid-template-areas:".    top"
-                        "content content"
-                        ;
+    grid-template-columns: 1fr 7fr;
+    grid-template-areas:"aside timeAll";
+    /* width: 800px; */
+    /* height: 1300px; */
 
-    
-    /* height: 100vh; */
-    min-width: 800px; 
-    margin: 0 3rem;
-    background-color: #fff;
-    margin-top: 5rem;
-    /* margin-bottom: 3rem; */
-    padding: 30px 30px;
+    /* border:1px solid #ccc; */
+    border-top: none;
 
-    color: #212529;
-  }
+    display: none;
+    /* transform: translateY(-1300px);
+    transition: all 2s; */
+}
 
-
-    /* ------ calendar begin ------ */
-    /* ------ top ------ */
-  .top_block{
-    grid-area: top;
-    height: 100px;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .top_block h2 {
-    font-size: 2rem;
-    line-height: 2rem;
-
-  }
-
-  .top_block a {
-    font-size: 2rem;
-    line-height: 2rem;
-  }
-
-    /* ------ calendar_main ------ */
-
-  .calendar_main {
-    grid-area: content;
-  }
-
-  .calendar_wrapper{
+.sidebar {
+    grid-area: aside;
     display: grid;
-    /* 左右 */
-    grid-template-columns:1fr 7fr;
-    /* 上下 */
-    grid-template-rows: 50px 100px 100px 100px 100px auto 100px 100px;
-    grid-template-areas:". weekhead"
-                        ". weeka"
-                        ". weekb"
-                        ". weekc"
-                        ". weekd"
-                        "time time"
-                        ". weeke"
-                        ". weekf";
+    /* width: 100px; */
+    grid-template-rows: repeat(13, 50px) ;
+    /* background-color: darkcyan; */
+}
 
-    /* transition: all 2s; */
-  }
+.sidebar > div {
+    text-align: center;
+    line-height: 50px;
+    box-shadow: inset 0 1px 0 0 #ccc;
+}
 
-  .calendar_week,
-  .calendar_header {
+.timeline {
+    grid-area: timeAll;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-  }
-
-  .calendar_header {
-    grid-area: weekhead;
-
-  }
-
-  .calendar_week {
-    /* grid-auto-rows: 100px; */
-    grid-auto-rows: 100px;
-    text-align: center;
-
-    /* grid-auto-columns: 100px; */
-  }
-
-  .week1 {
-    grid-area: weeka;
-  }
-
-  .week2 {
-    grid-area: weekb;
-  }
-
-  .week3 {
-    grid-area: weekc;
-  }
-
-  .week4 {
-    grid-area: weekd;
-  }
-
-  .week5 {
-    grid-area: weeke;
-  }
-
-  .week6 {
-    grid-area: weekf;
-  }
-
-  .calendar_header {
-    grid-auto-rows: 50px;
-    align-items: center;
-    text-align: center;
-    background-color: #212529;
-    color: #fff;
-  }
-
-  .calendar_header div {
-    position: relative;
-  }
-
-  .calendar_header div::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 2px;
-    height: 1rem;
-    background-color: #fff;
-  }
-
-  .calendar_header div:last-child:after {
-    display: none;
-  }
+    grid-template-rows: repeat(13, 50px) ;
+}
 
 
-  .calendar_header > div {
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-
-  .calendar_day {
-    font-size: 3rem;
-    line-height: 100px;
+.time_day {
+    box-shadow: inset 1px 0 0 #ccc, inset 0 1px 0 0 #ccc;
+    box-sizing: border-box;
+    /* 字排版用 */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border-right: 2px dashed #000; */
-    border-top: 2px dashed #000;
   }
 
+  .time_day:hover {
+      background-image: url('../img/square.png');
+      background-size: cover;
+      background-size: 70%;
+      background-repeat: no-repeat;
+      background-position: center;
 
+  } 
 
-  .calendar_day:hover {
-    background-image: url('../img/circle.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 50%;
-    background-position: center;
+  .time h4 {
+  line-height: 1.2;
   }
 
-  .calendar_day:nth-of-type(1n + 7),
-  .calendar_day:nth-of-type(7n + 1) {
-    background-color: #ccc;
-  }
-
-  .week1 .calendar_day {
-    border-top: 0;
-  }
-
-  /* .calendar_day:last-child {
-    border-right: 0;
-  } */
-  /* ------ calendar end ------ */
-
-  .time {
-      grid-area: time;
-      display: grid;
-      grid-template-columns: 1fr 7fr;
-      grid-template-areas:"aside timeAll";
-      /* width: 800px; */
-      /* height: 1300px; */
-  
-      /* border:1px solid #ccc; */
-      border-top: none;
-
-      display: none;
-      /* transform: translateY(-1300px);
-      transition: all 2s; */
+  .time p {
+  line-height: 1rem;
+  font-size: .8rem;
   }
   
-  .sidebar {
-      grid-area: aside;
-      display: grid;
-      /* width: 100px; */
-      grid-template-rows: repeat(13, 50px) ;
-      /* background-color: darkcyan; */
-  }
-  
-  .sidebar > div {
-      text-align: center;
-      line-height: 50px;
-      box-shadow: inset 0 1px 0 0 #ccc;
-  }
-  
-  .timeline {
-      grid-area: timeAll;
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      grid-template-rows: repeat(13, 50px) ;
-  }
-  
-  
-  .time_day {
-      box-shadow: inset 1px 0 0 #ccc, inset 0 1px 0 0 #ccc;
-      box-sizing: border-box;
-      /* 字排版用 */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .time_day:hover {
-        background-image: url('../img/square.png');
-        background-size: cover;
-        background-size: 70%;
-        background-repeat: no-repeat;
-        background-position: center;
-
-    } 
-
-    h4 {
-    line-height: 1.2;
-    }
-
-    p {
-    line-height: 1rem;
-    font-size: .8rem;
-    }
-    
-  .calendar_wrapper:hover .time {
-    display: grid;
-    /* transform: translateY(0px); */
-  }
+.calendar_wrapper:hover .time {
+  display: grid;
+  /* transform: translateY(0px); */
+}
 
   

@@ -2,9 +2,8 @@
 
 /* 預設 */
 body {
-    font-family: 'Roboto', sans-serif, '微軟正黑體';
+    font-family: 'Roboto', verdana, '微軟正黑體';
     font-size: 1rem;
-    font-family: sans-serif;
     line-height: 1.6;
     background-color: #f1faee;
     overflow: overlay;
@@ -41,14 +40,10 @@ a{
 }
 
 p {
-    font-family: 'Roboto';
+    font-family: '微軟正黑體';
     color: #212529;
 }
 
-.wrapper {
-    margin: 0 auto;
-    /* position: relative; */
-}
 
 h1,
 .h1 {
@@ -63,11 +58,6 @@ h2,
 h3,
 .h3 {
   font-size: 1.5rem;
-}
-
-h4,
-.h4 {
-  font-size: 1.25rem;
 }
 
 h4,

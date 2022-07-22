@@ -1,11 +1,11 @@
 /*------- main -------*/
-.main {
+main {
     width: 100vw;
     height: 100vh;
     position: relative;
 }
 
-.main .main_wrapper {
+main .main_wrapper {
     /* background-color: blue; */
     /* height: 100vh; */
     position: absolute;

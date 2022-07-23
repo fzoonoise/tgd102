@@ -205,7 +205,7 @@ footer .decorate {
   position: absolute;
   left: 1rem;
   bottom: 20px;
-  width: 900px;
+  /* width: 800px; */
 }
 
 footer .footer_content {

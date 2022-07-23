@@ -27,7 +27,7 @@ main {
     content: " ";
     /* border-top: 5px solid #212529; */
     /* display: inline-block; */
-    background-color: #212529;
+    background-color: #1d3557;
     height: 3px;
     width: 300px;
     align-self: center;
@@ -85,8 +85,8 @@ main {
 
 
 .main_about h2{
-    font-size: 2rem;
-    color: #212529;
+    font-weight: 500;
+    color: #1d3557;
     padding-left: 3rem;
     /* transition: all 3s; */
 }
@@ -102,18 +102,18 @@ main .main_wrapper {
     display: flex;
     flex-wrap: wrap;
     /* padding: 2rem; */
-    justify-content: space-between;
+    justify-content: flex-start;
     
 }
 
 .main_wrapper ul li {
     margin: 0 1.5rem 1.5rem;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 
 ul li .coach_block {
-    width: 200px;
-    height: 420px;
+    width: 300px;
+    height: 450px;
     background-color: #fff;
     word-wrap: break-word;
     /* border: 20px solid #fff; */
@@ -138,12 +138,14 @@ ul li .coach_block {
 }
 
 .main_wrapper ul li img {
-    min-width: 150px;
+    width: 300px;
+    height: 300px;
+    background-size:contain;
 }
 
-.main_wrapper h4 {
-    font-weight: 700;
-    font-size: 1.5rem;
+.main_wrapper h3 {
+    overflow: hidden;
+    font-weight: 500;
     color: #1d3557;
 }
 

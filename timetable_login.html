@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="viewport" content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Timetable</title>
+    <title>Timetable Edit</title>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='css/default.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/navfooter_white.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/timetable.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/timetable_login.css'>
 </head>
 <body>
 
@@ -58,7 +58,7 @@
       <a href="#">GET START</a>
   </div>
 
-  <!-- main begin -->
+      <!-- main begin -->
 
   <main>
     <div class="top_block">
@@ -83,7 +83,7 @@
 
       <div class="container">
         <div class="week week1">
-    
+   
         </div>
         <div class="week week2">
     
@@ -140,6 +140,35 @@
         </div>
       </div>
   </main>
+
+  <!-- 預約課程視窗 -->
+  <div id="reserveClassModal">
+    <h2>Reserve the Class</h2>
+    <div class="reserveClassModal_container">
+        <h2></h2>
+        <h3></h3>
+        <div class="classNum"></div>
+    </div>
+    <button id="cancelButton">Cancel</button>
+    <button id="reserveButton">Reserve</button>
+  </div>
+
+  <!-- 取消課程視窗 -->
+  <div id="cancelClassModal">
+    <h2>Cancel the Class</h2>
+    <div class="cancelClassModal_container">
+        <h2></h2>
+        <h3></h3>
+        <div class="classNum"></div>
+    </div>
+    <button id="closeButton">Close</button>
+    <button id="cancelReservationButton">Cancel Reservation</button>
+  </div>
+  <!-- 刪除課程視窗 end-->
+
+  <!-- 模糊背景 -->
+  <div id="modalBackDrop"></div>
+
   
   <!-- main end -->
 
@@ -204,7 +233,7 @@
 
     <!-- footer end -->
   
-<script src="js/timetable.js"></script>
+<script src="js/timetable_login.js"></script>
 </body>
 </html>
 

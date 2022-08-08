@@ -14,6 +14,7 @@ nav {
   padding: 0 3rem;
   /* justify-content: right; */
   font-family: "Roboto";
+  background-color: #212529;
 }
 
 nav a {
@@ -66,6 +67,24 @@ nav li a:hover {
 nav ul li a:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul > li:nth-of-type(2):hover > a, nav ul > li:nth-of-type(3):hover > a{
+  transform: none;
+  border: none;
+  background-color: rgb(241, 250, 238, .9);
+  color: #212529;
+}
+
+nav ul li ol li > a {
+  background-color: rgb(241, 250, 238, .9);
+  color: #212529;
+}
+
+nav ul li ol li:hover a{
+  transform: translateY(-3px);
+  background-color: rgba(33, 37, 41, .3);
+  color: #f1faee;
 }
 
 nav ul li a.btn {

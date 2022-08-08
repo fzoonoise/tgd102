@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="viewport" content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Timetable</title>
+    <title>Timetable Edit</title>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='css/default.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/navfooter_white.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/timetable.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/timetable_edit.css'>
 </head>
 <body>
 
@@ -58,7 +58,7 @@
       <a href="#">GET START</a>
   </div>
 
-  <!-- main begin -->
+      <!-- main begin -->
 
   <main>
     <div class="top_block">
@@ -83,7 +83,7 @@
 
       <div class="container">
         <div class="week week1">
-    
+   
         </div>
         <div class="week week2">
     
@@ -140,6 +140,51 @@
         </div>
       </div>
   </main>
+
+  <!-- 新增課程視窗 -->
+  <div id="newClassModal">
+    <h2>New Class</h2>
+    <div class="newClassModal_container">
+        <input id="classNameInput" placeholder="Class Name" value="">
+        <label for="teacher">Select a Teacher</label>
+        <select name="teacher" id="teacher" required>
+            <option value=""> -- Teacher Name -- </option>
+            <option value="Megan Meyer">Megan Meyer</option>
+            <option value="Roger Sanders">Roger Sanders</option>
+            <option value="Eric Monroe">Eric Monroe</option>
+            <option value="Daniel Nguyen">Daniel Nguyen</option>
+            <option value="Elizabeth Ward">Elizabeth Ward</option>
+            <option value="Falynn Guobadia">Falynn Guobadia</option>
+            <option value="Carolyn Kelley">Carolyn Kelley</option>
+            <option value="John Cena">Cameron Parsons</option>
+            <option value="Nancy Becker">Nancy Becker</option>
+        </select>
+        <label for="attendance">Attendance</label>
+        <input id="attendance" type="number" name="points" min="0" max="12" value="">
+    </div>
+    <button id="cancelButton">Cancel</button>
+    <button id="saveButton">Save</button>
+  </div>
+  <!-- 刪除課程視窗 -->
+  <div id="deleteClassModal">
+    <h2>The Class</h2>
+    <div class="deleteClassModal_container">
+        <input id="classText" value="" readonly>
+        <label for="teacherDisplay">Select a Teacher</label>
+        <select name="teacherDisplay" id="teacherDisplay" disabled>
+            <option></option>
+        </select>
+        <label for="attendanceDisplay">Attendance</label>
+        <input id="attendanceDisplay" type="number" name="points" min="0" max="12" value="" disabled>
+    </div>
+    <button id="closeButton">Close</button>
+    <button id="deleteButton">Delete</button>
+  </div>
+  <!-- 刪除課程視窗 end-->
+
+  <!-- 模糊背景 -->
+  <div id="modalBackDrop"></div>
+
   
   <!-- main end -->
 
@@ -204,7 +249,7 @@
 
     <!-- footer end -->
   
-<script src="js/timetable.js"></script>
+<script src="js/timetable_edit.js"></script>
 </body>
 </html>
 

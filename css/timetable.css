@@ -2,89 +2,108 @@ main {
   display: grid;
   margin: 0 auto;
   /* 左右 */
-  grid-template-columns:1fr 7fr;
+  grid-template-columns: 110px 7fr 110px;
   /* 上下 */
-  grid-template-rows:  auto 1fr;
-  grid-template-areas:".    top"
-                      "content content"
-                      ;
+  grid-template-rows: auto 50px 1fr;
+  grid-template-areas:
+    ". top ."
+    ". weekdays ."
+    "content content content";
 
-  
-  /* height: 100vh; */
-  min-width: 800px; 
+  min-width: 970px;
   margin: 0 3rem;
   background-color: #fff;
   margin-top: 5rem;
-  /* margin-bottom: 3rem; */
   padding: 30px 30px;
 
+  background-color: #fff;
   color: #212529;
 }
 
-
-  /* ------ calendar begin ------ */
-  /* ------ top ------ */
-.top_block{
+/* ------ calendar begin ------ */
+/* ------ top ------ */
+.top_block {
   grid-area: top;
   height: 100px;
-  background-color: #fff;
+  width: 600px;
+
   display: flex;
-  justify-content: space-around;
+  justify-content:space-between;
   align-items: center;
+  margin: 0 auto;
 }
 
-.top_block h2 {
-  font-size: 2rem;
-  line-height: 2rem;
-
-}
-
-.top_block a {
+.monthDisplay {
   font-size: 2rem;
   line-height: 2rem;
 }
 
-  /* ------ calendar_main ------ */
-
-.calendar_main {
-  grid-area: content;
+.top_block button {
+  font-size: 2rem;
+  line-height: 2rem;
+  border: none;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
 }
 
-.calendar_wrapper{
-  display: grid;
-  /* 左右 */
-  grid-template-columns:1fr 7fr;
-  /* 上下 */
-  grid-template-rows: 50px 100px 100px 100px 100px auto 100px 100px;
-  grid-template-areas:". weekhead"
-                      ". weeka"
-                      ". weekb"
-                      ". weekc"
-                      ". weekd"
-                      "time time"
-                      ". weeke"
-                      ". weekf";
-
-  /* transition: all 2s; */
-}
-
-.calendar_week,
-.calendar_header {
+.weekdays{
+  grid-area: weekdays;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+
+  text-transform: capitalize;
 }
 
-.calendar_header {
-  grid-area: weekhead;
+.weekdays > div{
+  margin: 0 5px;
+   color: #212529;
+   font-size: 1.5rem;
 
+
+   position: relative;
+   text-align: center;
 }
 
-.calendar_week {
-  /* grid-auto-rows: 100px; */
-  grid-auto-rows: 100px;
-  text-align: center;
+.weekdays div::after {
+  content: " ";
+  
+  position: absolute;
+  top: 25%;
+  bottom: 0;
+  right: -6px;
+  width: 2px;
+  height: 50%;
+  background-color: #212529;  
+}
 
-  /* grid-auto-columns: 100px; */
+.weekdays div:last-child:after {
+  display: none;
+}
+
+
+/* ------ container ------ */
+.container {
+  grid-area: content;
+  display: grid;
+  /* 左右 */
+  grid-template-columns: 110px 7fr 110px;
+  /* 上下 */
+  grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-areas:
+  ". weeka ."
+  ". weekb ."
+  ". weekc ."
+  ". weekd ."
+  ". weeke ."
+  ". weekf .";
+}
+                      
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 }
 
 .week1 {
@@ -111,141 +130,158 @@ main {
   grid-area: weekf;
 }
 
-.calendar_header {
-  grid-auto-rows: 50px;
-  align-items: center;
-  text-align: center;
-  background-color: #212529;
-  color: #fff;
-}
-
-.calendar_header div {
-  position: relative;
-}
-
-.calendar_header div::after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 2px;
-  height: 1rem;
-  background-color: #fff;
-}
-
-.calendar_header div:last-child:after {
-  display: none;
-}
-
-
-.calendar_header > div {
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.calendar_day {
+.day{
   font-size: 3rem;
-  line-height: 100px;
-  align-items: center;
-  justify-content: center;
-  /* border-right: 2px dashed #000; */
-  border-top: 2px dashed #000;
+  /* align-items: center; */
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 0px 0px 3px #666;
+  line-height: 80px;
+
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.week .day:hover{
+background-color: #BECBD4;
+/* 當日顏色 #A8DADC */
 }
 
 
-
-.calendar_day:hover {
+/* .day:hover {
   background-image: url('../img/circle.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 50%;
   background-position: center;
-}
-
-.calendar_day:nth-of-type(1n + 7),
-.calendar_day:nth-of-type(7n + 1) {
-  background-color: #ccc;
-}
-
-.week1 .calendar_day {
-  border-top: 0;
-}
-
-/* .calendar_day:last-child {
-  border-right: 0;
 } */
+
+.day:nth-of-type(1n + 7),
+.day:nth-of-type(7n + 1) {
+  background: #6D8A96;
+}
+
+#currentDay {
+  background-color:#EFA00B;
+}
+
+#currentDay:hover{
+  background-color: #BECBD4 ;
+}
+
+.padding{
+  cursor: default !important;
+  background-color: #FFFFFF !important;
+  box-shadow: none !important;
+}
+
+.-none{
+  display: none;
+}
+
 /* ------ calendar end ------ */
 
-.time {
-    grid-area: time;
-    display: grid;
-    grid-template-columns: 1fr 7fr;
-    grid-template-areas:"aside timeAll";
-    /* width: 800px; */
-    /* height: 1300px; */
+/* ------ schedule------ */
 
-    /* border:1px solid #ccc; */
-    border-top: none;
+.schedule {
+  grid-area: time;
+  display: grid;
+  grid-template-columns: 110px 7fr 110px;
+  grid-template-areas: "left timeAll right";
 
-    display: none;
-    /* transform: translateY(-1300px);
+
+  border-top: none;
+  /* display: none; */
+
+  /* transform: translateY(-1300px);
     transition: all 2s; */
 }
 
-.sidebar {
-    grid-area: aside;
-    display: grid;
-    /* width: 100px; */
-    grid-template-rows: repeat(13, 50px) ;
-    /* background-color: darkcyan; */
+.timeline{
+  grid-area: timeAll;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(13, 50px) ;
+  box-shadow: inset 0px -1px 0 0 #ccc;
 }
 
-.sidebar > div {
-    text-align: center;
-    line-height: 50px;
-    box-shadow: inset 0 1px 0 0 #ccc;
+.timeZone {
+  box-shadow: inset 1px 1px #ccc;
+  /* box-shadow: 0px 0px 1px #212529; */
+  box-sizing: border-box;
+  /* 字排版用 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* cursor: pointer; */
+
 }
 
-.timeline {
-    grid-area: timeAll;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(13, 50px) ;
+.timeZone:hover{
+  /* background: #BECBD4; */
 }
 
+/* .time_day:hover {
+  background-image: url("../img/square.png");
+  background-size: cover;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
 
-.time_day {
-    box-shadow: inset 1px 0 0 #ccc, inset 0 1px 0 0 #ccc;
-    box-sizing: border-box;
-    /* 字排版用 */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .time_day:hover {
-      background-image: url('../img/square.png');
-      background-size: cover;
-      background-size: 70%;
-      background-repeat: no-repeat;
-      background-position: center;
-
-  } 
-
-  .time h4 {
+.timeZone h4 {
   line-height: 1.2;
-  }
+}
 
-  .time p {
+.timeZone p {
+  line-height: 1rem;
+  font-size: 0.8rem;
+}
+
+.leftbar,.rightbar {
+  display: grid;
+  width: 110px;
+  grid-template-rows: repeat(13, 50px);
+}
+.leftbar{grid-area: left;}
+.rightbar{grid-area: right;}
+
+.leftbar > div{
+  text-align: center;
+  line-height: 50px;
+  box-shadow: inset 0 1px 0 0 #ccc;
+}
+
+.leftbar div:first-child{
+  box-shadow: inset 0 0 0 0 #ccc;
+}
+
+.rightbar > div {
+  text-align: center;
+  line-height: 50px;
+  box-shadow: inset 1px 1px 0 0 #ccc;
+}
+
+.rightbar div:first-child{
+  box-shadow: inset 1px 0 0 0#ccc;
+}
+
+.event{
+  padding: 3px;
+  overflow: hidden;
+  /* cursor: pointer; */
+}
+
+.event h4{
+  line-height: 1.2rem;
+}
+
+.event p{
   line-height: 1rem;
   font-size: .8rem;
-  }
-  
-.calendar_wrapper:hover .time {
-  display: grid;
-  /* transform: translateY(0px); */
 }
 
-  
+/* ------ schedule end ------ */
+

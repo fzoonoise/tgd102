@@ -1,0 +1,124 @@
+/*------- main -------*/
+main {
+    width: 100vw;
+    /* height: 100vh; */
+    position: relative;
+    margin-top: 5rem;
+    overflow: hidden;
+}
+
+button{
+    cursor: pointer;
+}
+.main_bg {
+    width: calc(100vw * 6/12);
+    /* width: 400px; */
+    height: 2400px;
+    background-image: linear-gradient(
+        to right,
+        rgba(241, 250, 238, 1) 0,
+        /* rgba(241, 250, 238, .8) 5%, */
+        rgba(241, 250, 238, .8) 30%,
+        rgba(241, 250, 238, 0) 75%),
+        url('../img/classes_main_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    overflow: hidden;
+}
+
+h3 {
+    font-weight: 500;
+    color: #1d3557;
+}
+
+p {}
+
+main a {
+    font-size: 2rem;
+}
+
+.main_content {
+    /* width: 70%; */
+    margin-left: 3rem;
+}
+
+.main_content ul {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main_content ul .list_wrapper {
+    background-color: rgba(255, 255, 255, .5);
+    width: 1000px;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.main_content .accordion {
+    background-color: rgba(255, 255, 255, .0);
+    border: none;
+    display: flex;
+    height: 200px;
+
+}
+
+.accordion:after {
+    content: '\002B'; /* Unicode character for "plus" sign (+) */
+    font-size: 2rem;
+    color: #1d3557;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: '\2212'; /* Unicode character for "minus" sign (-) */
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    /* background-color: #ccc; */
+}
+
+.main_content ul li .img_wrapper {
+    width: 150px;
+    height: 150px;
+    background-color: #e63946;
+    align-self: center;
+    box-sizing: border-box;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.main_content ul li img{
+    width: 130px;
+    height: 130px;
+}
+
+.main_content ul li span {
+    margin-left: 1rem;
+}
+
+.main_content ol {
+    margin-left: calc(150px + 1rem);
+    box-sizing: border-box;
+    
+    /* for accordion */
+    /* display: none;
+    overflow: hidden; */
+
+    /* for slide down */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
+}
+
+.main_content ol li{
+    /* display: none; */
+    height: 200px;
+}

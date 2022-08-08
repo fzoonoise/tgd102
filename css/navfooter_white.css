@@ -118,28 +118,33 @@ nav li:hover ol li a {
   display: block;
 }
 
-nav ul li .nav_login a {
+#nav_login{
   display: none;
   position: absolute;
-  background-color: #1d3557;
-  /* opacity: .9; */
-  color: #f1faee;
-  border: 10px double;
-  border-color: transparent;
-
   right: 3rem;
-  transform: none;
-  /* transition: all .5s; */
+  top: 3.5rem;
 }
 
-nav li:hover .nav_login a {
+#nav_login a {
+  background-color: #1d3557;
+  opacity: .8;
+  color: #f1faee;
+
+  transform: none;
+}
+
+nav li:hover #nav_login{
+  display: block;
+}
+
+nav li:hover #nav_login a{
   display: block;
   transform: none;
   box-shadow: none;
+  border: none;
 }
 
-/* nav ul li a:active */
-nav ul li .nav_login a:active {
+nav ul li #nav_login a:active {
   transform: none;
   box-shadow: none;
   color: #a8dadc;

@@ -237,7 +237,6 @@ function reserveEvent() {
       item.num >= 12
     ) {
       alert('The class is full.');
-    }
   });
 
   closeModal();

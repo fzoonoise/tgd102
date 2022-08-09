@@ -8,7 +8,7 @@ let weekByDefault = [];
 let monthByDefault = [];
 let events = localStorage.getItem('events')
   ? JSON.parse(localStorage.getItem('events'))
-    : [];
+  : [];
 
 const backDrop = document.getElementById('modalBackDrop');
 // 新增視窗
@@ -175,11 +175,11 @@ function scheduleLoad() {
   timeLine.innerHTML = '';
 
   for (let i = 1; i <= 7 * 13; i++) {
-    const timeSquire = document.createElement('div');
-    // timeSquire.id = 'fdlkjg'
-    timeSquire.classList.add('timeZone');
-    timeLine.appendChild(timeSquire);
-    // timeSquire.innerText = `${i % 7} ${Math.ceil(i / 7)}`;
+    const timeSquare = document.createElement('div');
+    // timeSquare.id = 'fdlkjg'
+    timeSquare.classList.add('timeZone');
+    timeLine.appendChild(timeSquare);
+    // timeSquare.innerText = `${i % 7} ${Math.ceil(i / 7)}`;
 
     const dateString = weekByDefault[(i % 7 === 0 ? 7 : i % 7) - 1];
     // console.log(dateString, typeof(dateString));
@@ -196,10 +196,10 @@ function scheduleLoad() {
       <h4>${eventForClass.name}</h4>
       <p>${eventForClass.teacher}</p>
       `;
-      timeSquire.appendChild(classDiv);
+      timeSquare.appendChild(classDiv);
     }
 
-    timeSquire.addEventListener('click', () => openModal(dateString, classNum));
+    timeSquare.addEventListener('click', () => openModal(dateString, classNum));
   }
 }
 

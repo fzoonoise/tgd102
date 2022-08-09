@@ -179,6 +179,14 @@ main {
   .-none{
     display: none;
   }
+
+  .-bookingDay{
+    background-image: url('../img/circle.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 50%;
+    background-position: center;
+  }
   
   /* ------ calendar end ------ */
   
@@ -226,7 +234,7 @@ main {
     background: #BECBD4;
   }
   
-  /* .time_day:hover {
+  /* .timeZone:hover {
     background-image: url("../img/square.png");
     background-size: cover;
     background-size: 70%;
@@ -286,6 +294,13 @@ main {
     font-size: .8rem;
   }
   
+  .-booking{
+    background-image: url("../img/square.png");
+    background-size: cover;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   /* ------ schedule end ------ */
   
   

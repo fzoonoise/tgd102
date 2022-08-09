@@ -21,9 +21,8 @@ for (let i = 0; i < acc.length; i++) {
       if (panel.style.maxHeight) {
         panel.style.maxHeight = null;       
       } else {
-        // acc.classList.toggle("active"); 待改
         let accAll= this.closest("ul").querySelectorAll("button.accordion")
-        console.log(accAll);
+        // console.log(accAll);
         accAll.forEach(function (item, i) {
           item.classList.remove("active");
         })

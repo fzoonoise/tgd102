@@ -23,7 +23,7 @@ button{
         url('../img/classes_main_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 100% 100%;
+    background-position: fixed;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -31,13 +31,21 @@ button{
     z-index: -1;
     overflow: hidden;
 }
+span h3{
+    font-weight: 600;
+    color: #1d3557;
+    /* line-height: 3rem; */
+}
 
 h3 {
     font-weight: 500;
     color: #1d3557;
 }
 
-p {}
+p {
+    text-align: start;
+    font-size: 1rem;
+}
 
 main a {
     font-size: 2rem;
@@ -101,7 +109,8 @@ main a {
 }
 
 .main_content ul li span {
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
+    margin: 1rem 0 1rem 1rem;
 }
 
 .main_content ol {

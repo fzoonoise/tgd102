@@ -228,14 +228,18 @@ function reserveEvent() {
     ) {
       events[i].num++;
       events[i].booking = true;
-      // console.log(clickedDate,clickedNum);
-      // console.log(item.date,item.classNum);
+
       localStorage.setItem('events', JSON.stringify(events));
       alert('Your reservation is successful ☜(ﾟヮﾟ☜)');
-    } else if (item.num >= 12) {
+    } else if (
+      clickedDate === item.date &&
+      clickedNum === item.classNum &&
+      item.num >= 12
+    ) {
       alert('The class is full.');
     }
   });
+
   closeModal();
 }
 

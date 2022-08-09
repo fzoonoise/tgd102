@@ -116,11 +116,12 @@ function calendarLoad() {
     weeks[Math.ceil(i / 7) - 1].appendChild(daySquare);
 
     const bookingForClass = events.find(
-      e => e.date === dateString && e.booking === true);
+      e => e.date === dateString && e.booking === true
+    );
     if (bookingForClass) {
-      daySquare.classList.add('-bookingDay');  
+      daySquare.classList.add('-bookingDay');
     } else {
-      daySquare.classList.remove('-bookingDay'); 
+      daySquare.classList.remove('-bookingDay');
     }
   }
 }
@@ -215,11 +216,13 @@ function scheduleLoad() {
     }
 
     const bookingForClass = events.find(
-      e => e.date === dateString && e.classNum === classNum && e.booking === true);
+      e =>
+        e.date === dateString && e.classNum === classNum && e.booking === true
+    );
     if (bookingForClass) {
-      timeSquare.classList.add('-booking');  
+      timeSquare.classList.add('-booking');
     } else {
-      timeSquare.classList.remove('-booking'); 
+      timeSquare.classList.remove('-booking');
     }
 
     timeSquare.addEventListener('click', () => openModal(dateString, classNum));
@@ -236,7 +239,6 @@ function closeModal() {
 }
 
 function reserveEvent() {
-
   events.forEach(function (item, i) {
     if (
       clickedDate === item.date &&
@@ -248,6 +250,8 @@ function reserveEvent() {
 
       localStorage.setItem('events', JSON.stringify(events));
       alert('Your reservation is successful ☜(ﾟヮﾟ☜)');
+      calendarLoad();
+      scheduleLoad();
     } else if (
       clickedDate === item.date &&
       clickedNum === item.classNum &&
@@ -263,9 +267,13 @@ function cancelReservationEvent() {
   if (confirm('You would like to cancel your reservation?')) {
     alert('Your reservation is cancel !!!');
     events.forEach(function (item, i) {
-      events[i].num--;
-      events[i].booking = false;
-      localStorage.setItem('events', JSON.stringify(events));
+      if (clickedDate === item.date && clickedNum === item.classNum) {
+        events[i].num--;
+        events[i].booking = false;
+        localStorage.setItem('events', JSON.stringify(events));
+        calendarLoad();
+        scheduleLoad();
+      }
     });
   }
   closeModal();

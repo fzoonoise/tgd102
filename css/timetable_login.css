@@ -149,21 +149,13 @@ main {
   }
   
   
-  /* .day:hover {
-    background-image: url('../img/circle.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 50%;
-    background-position: center;
-  } */
-  
   .day:nth-of-type(1n + 7),
   .day:nth-of-type(7n + 1) {
     background: #6D8A96;
   }
   
   #currentDay {
-    background-color:#EFA00B;
+    background-color:#FFD95C;
   }
   
   #currentDay:hover{
@@ -184,7 +176,7 @@ main {
     background-image: url('../img/circle.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 50%;
+    background-size: 60%;
     background-position: center;
   }
   
@@ -233,15 +225,7 @@ main {
   .timeZone:hover{
     background: #BECBD4;
   }
-  
-  /* .timeZone:hover {
-    background-image: url("../img/square.png");
-    background-size: cover;
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
-  } */
-  
+
   .timeZone h4 {
     line-height: 1.2;
   }

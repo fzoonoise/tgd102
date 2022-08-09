@@ -12,8 +12,7 @@ button{
 }
 .main_bg {
     width: calc(100vw * 6/12);
-    /* width: 400px; */
-    height: 2400px;
+    height: 1400px;
     background-image: linear-gradient(
         to right,
         rgba(241, 250, 238, 1) 0,
@@ -23,8 +22,8 @@ button{
         url('../img/classes_main_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: fixed;
-    position: absolute;
+    /* background-position: fixed; */
+    position: fixed;
     right: 0;
     bottom: 0;
     margin: auto;

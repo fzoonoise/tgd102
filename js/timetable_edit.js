@@ -38,7 +38,7 @@ function openModal(date, num) {
   if (eventForClass) {
     classText.value = eventForClass.name;
     teacherDisplay.children[0].innerText = eventForClass.teacher;
-    attendanceDisplay.value = eventForClass.classNum;
+    attendanceDisplay.value = eventForClass.num;
     deleteClassModal.style.display = 'block';
     // console.log(teacherDisplay.children);
   } else {

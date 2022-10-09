@@ -70,7 +70,7 @@ function calendarLoad() {
     month: 'numeric', //2-digit
     day: 'numeric', //2-digit
   });
-  // console.log(dateString);
+  console.log(dateString);
   // console.log(firstDayOfMonth, daysInMonth,dateString);
   const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
